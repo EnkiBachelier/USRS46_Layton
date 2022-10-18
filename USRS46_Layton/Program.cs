@@ -6,7 +6,13 @@ namespace USRS46_Layton
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Layton theLayton = new Layton("Layton", 32);
+            Luke theLuke = new Luke("Luke", 13, theLayton);
+
+            Console.WriteLine(theLayton.SePresenter());
+            Console.WriteLine(theLuke.SePresenter());
+            theLayton.GiveEnigme(theLuke.AskEnigme());
+
         }
     }
 }
