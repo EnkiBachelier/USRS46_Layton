@@ -6,10 +6,10 @@ namespace USRS46_Layton
 {
     public class Enigme
     {
-        string name;
-        string description;
-        string solution;
-        string hint;
+        private string name;
+        private string description;
+        private string solution;
+        private string hint;
 
         public List<string> nameList;
         public Enigme(string name, string description, string solution, string hint)

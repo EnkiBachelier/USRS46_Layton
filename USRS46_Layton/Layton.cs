@@ -7,12 +7,6 @@ namespace USRS46_Layton
     public class Layton : Personnage
     {
 
-        public Layton(string nom, int age) : base(nom, age)
-        {
-
-        }
-
-
         public static List<string> enigmeNameList = new List<string>()
         {
             "1 - Drôles d'oiseaux",
@@ -20,14 +14,14 @@ namespace USRS46_Layton
             "3 - Une partie mémorable"
         };
 
-        public static Dictionary<string, string> hintDic = new Dictionary<string, string>() {
+        private static Dictionary<string, string> hintDic = new Dictionary<string, string>() {
                 { enigmeNameList[0], "Chaque fois que la femme tape dans ses mains, la moitié des oiseaux s'envole et un oiseau revient.\n" +
                  "Layton : Cependant, le nombre d'oiseaux reste le même. La réponse est si simple qu'il est inutile de faire un calcul.\n" },
                 { enigmeNameList[1], "Une multiplication et une calculatrice... Vous savez ce qu'il vous reste à faire.\n" },
                 { enigmeNameList[2], "Si un joueur trouve 9 paires dans un jeu de 20 cartes, combien de cartes reste-t-il à découvrir ?\n" }
         };
 
-        public List<Enigme> enigmeList = new List<Enigme>()
+        private List<Enigme> enigmeList = new List<Enigme>()
         {
             new Enigme(enigmeNameList[0], "'Vous tombez bien! J'essaie d'effrayer les oiseaux qui se posent sur les câbles électriques.\n" +
                 "A chaque fois que je tape des mains, la moitié des oiseaux s'envole, mais il y en a toujours un qui revient.\n" +
@@ -46,6 +40,14 @@ namespace USRS46_Layton
                 "'J'ai trouvé 8 paires d'affilée.\n" +
                 "L'un des joueurs ment, mais lequel ?", "B", "Layton : " + hintDic[enigmeNameList[2]])
         };
+
+
+        public Layton(string nom, int age) : base(nom, age)
+        {
+
+        }
+
+
 
 
 
