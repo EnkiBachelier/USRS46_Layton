@@ -6,7 +6,7 @@ namespace USRS46_Layton
 {
     public class Layton : Personnage
     {
-
+        #region Déclaration Variables
         public static List<string> enigmeNameList = new List<string>()
         {
             "1 - Drôles d'oiseaux",
@@ -40,18 +40,16 @@ namespace USRS46_Layton
                 "'J'ai trouvé 8 paires d'affilée.\n" +
                 "L'un des joueurs ment, mais lequel ?", "B", "Layton : " + hintDic[enigmeNameList[2]])
         };
+        #endregion
 
-
+        #region Constructeur
         public Layton(string nom, int age) : base(nom, age)
         {
-
         }
+        #endregion
 
-
-
-
-
-
+        #region Méthodes
+        //Retourne un texte de présentation (string) pour Layton
         public override string SePresenter()
         {
             string presentation = this.nom + " : Bonjour ! Féru d'archéologie, je ne refuse jamais un mystère !\n";
@@ -60,11 +58,11 @@ namespace USRS46_Layton
             return presentation;
         }
 
+        //Utilisée pour donner les énoncés des énigmes
         public void GiveEnigme(int nbEnigme)
         {
             enigmeList[nbEnigme].Enonce();
         }
-
-
+        #endregion
     }
 }
